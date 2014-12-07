@@ -1,0 +1,7 @@
+language: ruby
+rvm:
+  - 2.1.3
+  - ruby-head
+
+notifications:
+  email: false
