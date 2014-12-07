@@ -147,13 +147,13 @@ metal {
 
 * Gives you the illusion of programming in a *closer to the metal* syntax.
 * The examples in this README actually work.
-  [![Build Status](https://travis-ci.org/vanruby/javascript.svg)](https://travis-ci.org/vanruby/javascript)
+* [![Build Status](https://travis-ci.org/vanruby/javascript.svg)](https://travis-ci.org/vanruby/javascript)
 
 ## Cons
 
 * Things that aren't covered in the examples probably won't ever work.
   ([Check the tests](/test/javascript_test.rb))
-* [Not enough jQuery](http://meta.stackexchange.com/questions/45176/when-is-use-jquery-not-a-valid-answer-to-a-javascript-question)
+* [Not enough jQuery](http://meta.stackexchange.com/questions/45176/when-is-use-jquery-not-a-valid-answer-to-a-javascript-question).
 
 ## Contributing
 
