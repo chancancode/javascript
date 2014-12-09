@@ -1,9 +1,9 @@
 # JavaScript
 
-As much as we love writing Ruby, when you need to *get closer to the metal*, you
-have no choice but to use JavaScript. With this gem, Rubyists can finally
-harness the raw power of their machines by programming in JavaScript syntax
-*right inside their Ruby applications*.
+As much as we love writing Ruby, when you need to *get really close to the
+metal*, you have no choice but to use JavaScript. With this gem, Rubyists can
+finally harness the raw power of their machines by programming in JavaScript
+syntax *right inside their Ruby applications*.
 
 ## Installation
 

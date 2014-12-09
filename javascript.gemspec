@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Godfrey Chan"]
   spec.email         = ["godfreykfc@gmail.com"]
   spec.summary       = "Harness the raw power of your machine with JavaScript"
-  spec.description   = "With this gem, Rubyists can finally get closer to the " \
-                       "metal by programming in JavaScript syntax right within " \
-                       "their Ruby applications."
+  spec.description   = "With this gem, Rubyists can finally get really close " \
+                       "to the metal by programming in JavaScript syntax right " \
+                       "within their Ruby applications."
   spec.homepage      = "https://github.com/vanruby/javascript"
   spec.license       = "MIT"
 
