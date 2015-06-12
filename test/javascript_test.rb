@@ -120,6 +120,34 @@ class JavaScriptTest < TestCase
     assert_messages "Hello world!", 4
   end
 
+  test "closure" do
+    require "javascript"
+
+    javascript {
+      var a = 1;
+
+      function outer(b) {
+        var c = 3;
+
+        function inner(d) {
+          var e = 5;
+
+          console.log(a);
+          console.log(b);
+          console.log(c);
+          console.log(d);
+          console.log(e);
+        };
+
+        return inner(4);
+      }
+
+      outer(2);
+    }
+
+    assert_messages 1, 2, 3, 4, 5
+  end
+
   test "arguments" do
     require "javascript"
 
