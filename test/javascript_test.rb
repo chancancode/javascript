@@ -120,7 +120,7 @@ class JavaScriptTest < TestCase
     assert_messages "Hello world!", 4
   end
 
-  test "closure" do
+  test "closure (variables)" do
     require "javascript"
 
     javascript {
@@ -139,13 +139,45 @@ class JavaScriptTest < TestCase
           console.log(e);
         };
 
-        return inner(4);
+        inner(4);
       }
 
       outer(2);
     }
 
     assert_messages 1, 2, 3, 4, 5
+  end
+
+  test "closure (functions)" do
+    require "javascript"
+
+    javascript {
+      function a() {
+        return 1;
+      };
+
+      function outer() {
+        function b() {
+          return 2;
+        }
+
+        function inner() {
+          function c() {
+            return 3;
+          }
+
+          console.log(a());
+          console.log(b());
+          console.log(c());
+        };
+
+        inner();
+      }
+
+      outer();
+    }
+
+    assert_messages 1, 2, 3
   end
 
   test "arguments" do
