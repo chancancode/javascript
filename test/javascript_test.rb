@@ -101,6 +101,25 @@ class JavaScriptTest < TestCase
     assert_messages "a: hello", "b: hello", "a: c", "b: c"
   end
 
+  test "Functions can return a value" do
+    require "javascript"
+
+    javascript {
+      function identity(x) {
+        return x;
+      }
+
+      function square(x) {
+        return x * x;
+      }
+
+      console.log(identity("Hello world!"));
+      console.log(square(2));
+    }
+
+    assert_messages "Hello world!", 4
+  end
+
   test "arguments" do
     require "javascript"
 

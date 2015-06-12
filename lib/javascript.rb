@@ -180,9 +180,21 @@ module JavaScript
 
     def __eval__(*args, &block)
       JavaScript.current_scope = self
-      __method__(:instance_exec).call(*args, &block)
+
+      # convert the block to a lambda, so that +return+ works correctly
+      temp      = :"block_#{Time.now.to_i}"
+      metaclass = __method__(:singleton_class).call
+
+      metaclass.send(:define_method, temp, &block)
+
+      if block.arity.zero?
+        __method__(:send).call(temp)
+      else
+        __method__(:send).call(temp, *args)
+      end
     ensure
       JavaScript.current_scope = @parent
+      metaclass.send(:remove_method, temp)
     end
 
     private
