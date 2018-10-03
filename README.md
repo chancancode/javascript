@@ -56,7 +56,7 @@ javascript {
 
   function inspectArguments() {
     let args = Array.prototype.join.call(arguments, ", ");
-    console.log("Arguments: " + args);
+    console.log(`Arguments: ${args}`);
   }
 
   inspectArguments("a", "b", "c");

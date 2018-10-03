@@ -139,6 +139,10 @@ module JavaScript
       def var(*identifiers)
       end
 
+      def `(string)
+        __caller__.eval(string.inspect.gsub(/\$(?={)/, '#'))
+      end
+
       def new(identifier)
         ::Object.const_get(identifier.name).new(*identifier.args)
       end

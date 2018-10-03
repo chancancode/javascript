@@ -96,16 +96,30 @@ class JavaScriptTest < TestCase
     assert_nil javascript { window.a; }
   end
 
+  test "String interpolation" do
+    require "javascript"
+
+    javascript {
+      console.log(`hello world...`);
+
+      let name = "Godfrey";
+
+      console.log(`hello ${name}!`);
+    }
+
+    assert_messages "hello world...", "hello Godfrey!"
+  end
+
   test "Functions" do
     require "javascript"
 
     javascript {
       var a = function(msg) {
-        console.log("a: " + msg);
+        console.log(`a: ${msg}`);
       };
 
       function b(msg) {
-        console.log("b: " + msg);
+        console.log(`b: ${msg}`);
       }
 
       var c = "c";
