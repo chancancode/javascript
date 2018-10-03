@@ -23,15 +23,34 @@ class JavaScriptTest < TestCase
   test "this" do
     require "javascript"
 
-    javascript do
+    javascript {
       console.log(this === window);
       console.log(this === global);
-    end
+    }
 
     assert_messages true, true
   end
 
-  test "Local variables" do
+  test "Local variables (let)" do
+    require "javascript"
+
+    javascript {
+      let a = 1, b = 2;
+
+      console.log(a);
+      console.log(b);
+
+      a = a + 1;
+      b = a + b;
+
+      console.log(a);
+      console.log(b);
+    }
+
+    assert_messages 1, 2, 2, 4
+  end
+
+  test "Local variables (var)" do
     require "javascript"
 
     javascript {
@@ -120,7 +139,35 @@ class JavaScriptTest < TestCase
     assert_messages "Hello world!", 4
   end
 
-  test "closure (variables)" do
+  test "closure (let variables)" do
+    require "javascript"
+
+    javascript {
+      let a = 1;
+
+      function outer(b) {
+        let c = 3;
+
+        function inner(d) {
+          let e = 5;
+
+          console.log(a);
+          console.log(b);
+          console.log(c);
+          console.log(d);
+          console.log(e);
+        };
+
+        inner(4);
+      }
+
+      outer(2);
+    }
+
+    assert_messages 1, 2, 3, 4, 5
+  end
+
+  test "closure (var variables)" do
     require "javascript"
 
     javascript {
@@ -291,7 +338,7 @@ class JavaScriptTest < TestCase
     require "javascript"
 
     javascript {
-      var join = Array.prototype.join;
+      let join = Array.prototype.join;
 
       console.log(join.call(["a", "b", "c"], "+"));
       console.log(join.call([1, 2, 3, 4, 5], "-"));

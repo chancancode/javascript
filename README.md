@@ -34,7 +34,7 @@ javascript {
 
   console.log("ZOMG JavaScript");
 
-  var a = 1;
+  let a = 1;
 
   console.log(a);
 
@@ -42,7 +42,7 @@ javascript {
 
   console.log(a);
 
-  var b = function(x) {
+  let b = function(x) {
     console.log(x + 1);
   };
 
@@ -55,7 +55,7 @@ javascript {
   c(4);
 
   function inspectArguments() {
-    var args = Array.prototype.join.call(arguments, ", ");
+    let args = Array.prototype.join.call(arguments, ", ");
     console.log("Arguments: " + args);
   }
 

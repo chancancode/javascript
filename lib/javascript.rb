@@ -133,6 +133,9 @@ module JavaScript
         nil
       end
 
+      def let(*identifiers)
+      end
+
       def var(*identifiers)
       end
 
