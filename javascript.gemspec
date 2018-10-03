@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = "With this gem, Rubyists can finally get really close " \
                        "to the metal by programming in JavaScript syntax right " \
                        "within their Ruby applications."
-  spec.homepage      = "https://github.com/vanruby/javascript"
+  spec.homepage      = "https://github.com/chancancode/javascript"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -24,8 +24,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "binding_of_caller", "~> 0.7.0"
 
-  spec.add_development_dependency "bundler", "~> 1.7"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "minitest", "~> 5.0"
-  spec.add_development_dependency "activesupport", "~> 4.1.0"
+  spec.add_development_dependency "bundler", "~> 1.16"
 end
