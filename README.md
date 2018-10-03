@@ -1,5 +1,7 @@
 # JavaScript
 
+[![Build Status](https://travis-ci.org/chancancode/javascript.svg?branch=master)](https://travis-ci.org/chancancode/javascript)
+
 As much as we love writing Ruby, when you need to *get really close to the
 metal*, you have no choice but to use JavaScript. With this gem, Rubyists can
 finally harness the raw power of their machines by programming in JavaScript
