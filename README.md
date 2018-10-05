@@ -149,7 +149,6 @@ metal {
 
 * Gives you the illusion of programming in a *closer to the metal* syntax.
 * The examples in this README [actually work](/test/javascript_test.rb).
-* [![Build Status](https://travis-ci.org/vanruby/javascript.svg)](https://travis-ci.org/vanruby/javascript)
 
 ## Cons
 
@@ -158,7 +157,7 @@ metal {
 
 ## Contributing
 
-1. Fork it ( https://github.com/vanruby/javascript/fork )
+1. Fork it ( https://github.com/chancancode/javascript/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
